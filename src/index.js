@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Search from "./search";
-import reportWebVitals from "./reportWebVitals";
 
 import "./styles.css";
 
@@ -15,6 +14,16 @@ function App() {
           </div>
         </div>
       </div>
+      <small>
+        <a
+          href="https://github.com/ffionwyn/weather-app-react.git"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open source code
+        </a>
+        <span> by Ffion Griffiths</span>
+      </small>
     </div>
   );
 }

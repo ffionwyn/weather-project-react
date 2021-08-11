@@ -18,8 +18,11 @@ export default function Search() {
   }
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = "6b953ee073bb6d456951bd28c1caeaaf";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    if (city.length > 0) {
+      let apiKey = "6b953ee073bb6d456951bd28c1caeaaf";
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+      axios.get(apiUrl).then(displayWeather);
+    }
   }
 
   function updateCity(event) {
@@ -54,14 +57,4 @@ export default function Search() {
   } else {
     return form;
   }
-    <small>
-      <a
-        href="https://github.com/ffionwyn/weather-app-react.git"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Open source code
-      </a>
-      <span> by Ffion Griffiths</span>
-    </small>;
 }
