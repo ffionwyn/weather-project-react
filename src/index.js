@@ -14,16 +14,16 @@ function App() {
           </div>
         </div>
       </div>
-      <small>
+      <footer>
         <a
-          href="https://github.com/ffionwyn/weather-app-react.git"
+          href="https://github.com/ffionwyn/weather-project-react"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           Open source code
         </a>
-        <span> by Ffion Griffiths</span>
-      </small>
+        <span> by Ffion Griffiths hosted on Netlify</span>
+      </footer>
     </div>
   );
 }
