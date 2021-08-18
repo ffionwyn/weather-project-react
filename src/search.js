@@ -55,29 +55,32 @@ export default function Search() {
         {form}
         <ul>
           <li>{city} </li>
-          <li> {Math.round(getTemperature(weather.temperature))}°C</li>
+          <li>
+            {" "}
+            {Math.round(getTemperature(weather.temperature))}{" "}
+            <input
+              type="radio"
+              id="metric"
+              name="temperature-unit"
+              value="metric"
+              checked={temperatureUnit === "metric"}
+              onChange={() => setTemperatureUnit("metric")}
+            />
+            <label htmlFor="metric">°C</label>
+            <input
+              type="radio"
+              id="imperial"
+              name="temperature-unit"
+              value="imperial"
+              checked={temperatureUnit === "imperial"}
+              onChange={() => setTemperatureUnit("imperial")}
+            />
+            <label htmlFor="imperial">°F</label>
+          </li>
           <li> {weather.description}</li>
           <li>{weather.humidity}% Humidity</li>
           <li>{weather.wind}mph Wind</li>
         </ul>
-        <input
-          type="radio"
-          id="metric"
-          name="temperature-unit"
-          value="metric"
-          checked={temperatureUnit === "metric"}
-          onChange={() => setTemperatureUnit("metric")}
-        />
-        <label htmlFor="metric">°C</label>
-        <input
-          type="radio"
-          id="imperial"
-          name="temperature-unit"
-          value="imperial"
-          checked={temperatureUnit === "imperial"}
-          onChange={() => setTemperatureUnit("imperial")}
-        />
-        <label htmlFor="imperial">°F</label>
       </div>
     );
   } else {
