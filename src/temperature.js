@@ -5,7 +5,7 @@ export default function Temperature(props) {
   return (
     <div className="Temperature">
       <div className="Degrees">
-        <h1 className="current-degrees">{props.value} °C</h1>
+        <h1 className="current-degrees">{props.value} </h1>
       </div>
     </div>
   );
