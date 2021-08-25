@@ -4,7 +4,6 @@ li {
 }
 
 .container {
-  position: fixed;
   left: 25%;
   width: 30%;
   margin: 10px;
@@ -43,4 +42,8 @@ button {
 }
 .search-button {
   margin-left: 5px;
+}
+
+body {
+  font-size: 10px;
 }
