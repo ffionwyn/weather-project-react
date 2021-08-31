@@ -45,7 +45,6 @@ export default function Search() {
         onChange={updateCity}
       />
       <button type="Submit">Search</button>
-      <button type="Submit">Current Location</button>
     </form>
   );
 
